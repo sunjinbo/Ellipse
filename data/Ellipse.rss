@@ -1,0 +1,487 @@
+/*
+============================================================================
+ Name		: Ellipse.rss
+ Author	  : Sun Jinbo
+ Copyright   : Your copyright notice
+ Description : This file contains all the resources for the Ellipse.
+============================================================================
+*/
+//  RESOURCE IDENTIFIER
+NAME ELLI	// 4 letter ID
+
+
+//  INCLUDES
+#include <eikon.rh>
+#include <avkon.rsg>
+#include <avkon.rh>
+#include <appinfo.rh>
+#include <avkon.mbg>
+#include "Ellipse.hrh"
+#include "Ellipse.loc"
+
+//  RESOURCE DEFINITIONS
+
+// -----------------------------------------------------------------------------
+//
+//	Define the resource file signature
+//	This resource should be empty.
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE RSS_SIGNATURE
+	{
+	}
+
+// -----------------------------------------------------------------------------
+//
+//	Default Document Name
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE TBUF r_default_document_name
+	{
+	buf="ELLI";
+	}
+
+// -----------------------------------------------------------------------------
+//
+//	Define default menu and CBA key.
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE EIK_APP_INFO
+	{
+	menubar = r_empty_menubar;
+	cba = R_AVKON_SOFTKEYS_OPTIONS_EXIT;
+	}
+
+// -----------------------------------------------------------------------------
+//
+//   r_empty_menubar
+//   Main menubar
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE MENU_BAR r_empty_menubar
+	{
+	titles =
+		{
+		MENU_TITLE { menu_pane = r_empty_menu; }
+		};
+	}
+
+// -----------------------------------------------------------------------------
+//
+//   r_pins_string_checked_menubar
+//   Main menubar
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE MENU_BAR r_pins_string_checked_menubar
+    {
+    titles =
+        {
+        MENU_TITLE { menu_pane = r_pins_string_checked_menu; }
+        };
+    }
+
+// -----------------------------------------------------------------------------
+//
+//   r_hypotrochoid_checked_menubar
+//   Main menubar
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE MENU_BAR r_hypotrochoid_checked_menubar
+    {
+    titles =
+        {
+        MENU_TITLE { menu_pane = r_hypotrochoid_checked_menu; }
+        };
+    }
+
+// -----------------------------------------------------------------------------
+//
+//   r_archimedes_checked_menubar
+//   Main menubar
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE MENU_BAR r_archimedes_checked_menubar
+    {
+    titles =
+        {
+        MENU_TITLE { menu_pane = r_archimedes_checked_menu; }
+        };
+    }
+
+// -----------------------------------------------------------------------------
+//
+//   r_empty_menu
+//   Menu for "Options"
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE MENU_PANE r_empty_menu
+	{
+	items =
+		{
+		// added the new Options menu command here
+        MENU_ITEM
+                {
+                txt = qtn_drawing_method;
+                cascade = r_empty_cascade_menu;
+                },
+		MENU_ITEM
+				{
+				command = EAboutCmd;
+				txt = qtn_about;
+				},
+		MENU_ITEM
+				{
+				command = EAknSoftkeyExit;
+				txt = qtn_exit;
+				}
+		};
+	}
+
+// -----------------------------------------------------------------------------
+//
+//   r_pins_string_checked_menu
+//   Menu for "Options"
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE MENU_PANE r_pins_string_checked_menu
+    {
+    items =
+        {
+        // added the new Options menu command here
+        MENU_ITEM
+                {
+                txt = qtn_drawing_method;
+                cascade = r_pins_string_checked_cascade_menu;
+                },
+        MENU_ITEM
+                {
+                command = EAboutCmd;
+                txt = qtn_about;
+                },
+        MENU_ITEM
+                {
+                command = EAknSoftkeyExit;
+                txt = qtn_exit;
+                }
+        };
+    }
+
+// -----------------------------------------------------------------------------
+//
+//   r_hypotrochoid_checked_menu
+//   Menu for "Options"
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE MENU_PANE r_hypotrochoid_checked_menu
+    {
+    items =
+        {
+        // added the new Options menu command here
+        MENU_ITEM
+                {
+                txt = qtn_drawing_method;
+                cascade = r_hypotrochoid_checked_cascade_menu;
+                },
+        MENU_ITEM
+                {
+                command = EAboutCmd;
+                txt = qtn_about;
+                },
+        MENU_ITEM
+                {
+                command = EAknSoftkeyExit;
+                txt = qtn_exit;
+                }
+        };
+    }
+
+// -----------------------------------------------------------------------------
+//
+//   r_archimedes_checked_menu
+//   Menu for "Options"
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE MENU_PANE r_archimedes_checked_menu
+    {
+    items =
+        {
+        // added the new Options menu command here
+        MENU_ITEM
+                {
+                txt = qtn_drawing_method;
+                cascade = r_archimedes_checked_cascade_menu;
+                },
+        MENU_ITEM
+                {
+                command = EAboutCmd;
+                txt = qtn_about;
+                },
+        MENU_ITEM
+                {
+                command = EAknSoftkeyExit;
+                txt = qtn_exit;
+                }
+        };
+    }
+
+// -----------------------------------------------------------------------------
+//
+//   r_empty_cascade_menu
+//   Menu for "Drawing method"
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE MENU_PANE r_empty_cascade_menu
+    {
+    items =
+        {
+        // added the new Options menu command here
+        MENU_ITEM
+                {
+                command = EPinsStringMethodCmd;
+                txt = qtn_pins_string_method_short_text;
+                },
+        MENU_ITEM
+                {
+                command = EHypotrochoidMethodCmd;
+                txt = qtn_hypotrochoid_method_short_text;
+                },
+        MENU_ITEM
+                {
+                command = EArchimedesMethodCmd;
+                txt = qtn_archimedes_method_short_text;
+                }
+        };
+    }
+
+// -----------------------------------------------------------------------------
+//
+//   r_pins_string_checked_cascade_menu
+//   Menu for "Drawing method"
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE MENU_PANE r_pins_string_checked_cascade_menu
+    {
+    items =
+        {
+        // added the new Options menu command here
+        MENU_ITEM
+                {
+                command = EPinsStringMethodCmd;
+                txt = qtn_pins_string_method_short_text;
+                bmpfile = "\\resource\\apps\\avkon2.mif";
+                bmpid = EMbmAvkonQgn_indi_marked_add;
+                bmpmask = EMbmAvkonQgn_indi_marked_add_mask;
+                },
+        MENU_ITEM
+                {
+                command = EHypotrochoidMethodCmd;
+                txt = qtn_hypotrochoid_method_short_text;
+                },
+        MENU_ITEM
+                {
+                command = EArchimedesMethodCmd;
+                txt = qtn_archimedes_method_short_text;
+                }
+        };
+    }
+
+// -----------------------------------------------------------------------------
+//
+//   r_hypotrochoid_checked_cascade_menu
+//   Menu for "Drawing method"
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE MENU_PANE r_hypotrochoid_checked_cascade_menu
+    {
+    items =
+        {
+        // added the new Options menu command here
+        MENU_ITEM
+                {
+                command = EPinsStringMethodCmd;
+                txt = qtn_pins_string_method_short_text;
+                },
+        MENU_ITEM
+                {
+                command = EHypotrochoidMethodCmd;
+                txt = qtn_hypotrochoid_method_short_text;
+                bmpfile = "\\resource\\apps\\avkon2.mif";
+                bmpid = EMbmAvkonQgn_indi_marked_add;
+                bmpmask = EMbmAvkonQgn_indi_marked_add_mask;
+                },
+        MENU_ITEM
+                {
+                command = EArchimedesMethodCmd;
+                txt = qtn_archimedes_method_short_text;
+                }
+        };
+    }
+
+// -----------------------------------------------------------------------------
+//
+//   r_archimedes_checked_cascade_menu
+//   Menu for "Drawing method"
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE MENU_PANE r_archimedes_checked_cascade_menu
+    {
+    items =
+        {
+        // added the new Options menu command here
+        MENU_ITEM
+                {
+                command = EPinsStringMethodCmd;
+                txt = qtn_pins_string_method_short_text;
+                },
+        MENU_ITEM
+                {
+                command = EHypotrochoidMethodCmd;
+                txt = qtn_hypotrochoid_method_short_text;
+                },
+        MENU_ITEM
+                {
+                command = EArchimedesMethodCmd;
+                txt = qtn_archimedes_method_short_text;
+                bmpfile = "\\resource\\apps\\avkon2.mif";
+                bmpid = EMbmAvkonQgn_indi_marked_add;
+                bmpmask = EMbmAvkonQgn_indi_marked_add_mask;
+                }
+        };
+    }
+
+// -----------------------------------------------------------------------------
+//
+// About dialog resource.
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE DIALOG r_about_query_dialog
+	{
+	flags = EGeneralQueryFlags | EEikDialogFlagNoBorder | EEikDialogFlagNoShadow;
+	buttons = R_AVKON_SOFTKEYS_OK_EMPTY;
+	items=
+		{
+		DLG_LINE 
+			{
+			type = EAknCtPopupHeadingPane;
+			id = EAknMessageQueryHeaderId;
+			itemflags = EEikDlgItemNonFocusing;
+			control = AVKON_HEADING
+				{
+				};
+			},
+		DLG_LINE
+			{
+			type = EAknCtMessageQuery;
+			id = EAknMessageQueryContentId;
+			control = AVKON_MESSAGE_QUERY
+				{
+				};
+			}
+		};
+	}
+
+// -----------------------------------------------------------------------------
+//   
+//    r_aknpoplist_menu_drawing_method_title
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE TBUF32 r_aknpoplist_menu_drawing_method_title
+    {
+    buf = qtn_drawing_method;
+    }
+
+// -----------------------------------------------------------------------------
+//   
+//    r_ellipse_popupmenu
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE STYLUS_POPUP_MENU r_ellipse_popupmenu
+    {
+    items = 
+        {
+        STYLUS_POPUP_MENU_ITEM
+            {
+            txt = qtn_pins_string_method;
+            command = EPinsStringMethodCmd;
+            },
+        STYLUS_POPUP_MENU_ITEM
+            {
+            txt = qtn_hypotrochoid_method;
+            command = EHypotrochoidMethodCmd;
+            },
+        STYLUS_POPUP_MENU_ITEM
+            {
+            txt = qtn_archimedes_method;
+            command = EArchimedesMethodCmd;
+            }
+        };
+     }
+
+// -----------------------------------------------------------------------------
+//   
+//    r_aknpoplist_menu_drawing_method_array
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE ARRAY r_aknpoplist_menu_drawing_method_array
+    {
+    items = 
+        {
+        LBUF { txt = qtn_pins_string_method; },
+        LBUF { txt = qtn_hypotrochoid_method; },
+        LBUF { txt = qtn_archimedes_method; }
+        };
+    }
+
+// -----------------------------------------------------------------------------
+//
+// Resources for messages.
+//
+// -----------------------------------------------------------------------------
+//
+RESOURCE TBUF32 r_caption_string { buf=qtn_caption_string; }
+RESOURCE TBUF32 r_about_dialog_title { buf=qtn_about_dialog_title; }
+RESOURCE TBUF r_about_dialog_text { buf=qtn_about_dialog_text; }
+RESOURCE TBUF r_pins_string_method_text { buf=qtn_pins_string_method; }
+RESOURCE TBUF r_hypotrochoid_method_text { buf=qtn_hypotrochoid_method; }
+RESOURCE TBUF r_archimedes_method_text { buf=qtn_archimedes_method; }
+RESOURCE TBUF r_empty_method_text { buf=qtn_empty_method; }
+
+// ---------------------------------------------------------------------------- 
+//
+// r_localisable_app_info
+//
+// ---------------------------------------------------------------------------- 
+//
+RESOURCE LOCALISABLE_APP_INFO r_localisable_app_info
+	{
+	short_caption = qtn_caption_string;
+	caption_and_icon = 
+	CAPTION_AND_ICON_INFO
+		{
+		caption = qtn_caption_string;
+
+		number_of_icons = 1;
+		icon_file = "\\resource\\apps\\Ellipse_0xe8381f31.mif";
+		};
+	}
+
+// End of File

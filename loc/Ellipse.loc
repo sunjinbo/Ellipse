@@ -1,0 +1,33 @@
+/*
+============================================================================
+ Name        : Ellipse.loc
+ Author      : Sun Jinbo
+ Copyright   : Your copyright notice
+ Description : This is a localisation file for Ellipse
+                A .rls file is the one and only place where the logical
+                strings to be localised are defined. 
+============================================================================
+*/
+
+#ifndef __ELLIPSE_LOC__
+#define __ELLIPSE_LOC__
+
+#ifdef LANGUAGE_SC            // language code for Engine English
+#include "..\loc\00\Ellipse_00.loc"
+
+#elif LANGUAGE_01            // language code for UK
+#include "..\loc\01\Ellipse_01.loc"
+
+#elif defined LANGUAGE_31        // language code for Chinese of PRC
+#include "..\loc\31\Ellipse_31.loc"
+
+#elif defined LANGUAGE_159        // language code for English of PRC
+#include "..\loc\159\Ellipse_159.loc"
+
+#else
+#include "..\loc\00\Ellipse_00.loc" // language code for Engine English
+#endif
+
+#endif // __ELLIPSE_LOC__
+
+// End of file

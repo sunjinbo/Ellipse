@@ -1,0 +1,32 @@
+/*
+ ============================================================================
+ Name		: Ellipse.hrh
+ Author	  : Sun Jinbo
+ Copyright   : Your copyright notice
+ Description : This file contains declarations for constants of Ellipse.
+ The file can be included in C++ or resource file.
+ ============================================================================
+ */
+#ifndef __ELLIPSE_HRH__
+#define __ELLIPSE_HRH__
+
+#define _UID3 0xe8381f31
+
+// Ellipse enumerate command codes
+enum TEllipseCommandIds
+    {
+    EAboutCmd = 0x6001, // start value must not be 0
+    EPinsStringMethodCmd,
+    EHypotrochoidMethodCmd,
+    EArchimedesMethodCmd
+    };
+
+enum TEllipseDrawingMethods
+	{
+    EEmptyMethod = -1,
+	EPinsStringMethod,
+	EHypotrochoidMethod,
+	EArchimedesMethod
+	};
+
+#endif // __ELLIPSE_HRH__

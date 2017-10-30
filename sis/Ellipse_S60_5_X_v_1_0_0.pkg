@@ -1,0 +1,39 @@
+; Installation file for Ellipse application
+;
+; This is an auto-generated PKG file by Carbide.
+; This file uses variables specific to Carbide builds that will not work
+; on command-line builds. If you want to use this generated PKG file from the
+; command-line tools you will need to modify the variables with the appropriate
+; values: $(EPOCROOT), $(PLATFORM), $(TARGET)
+;
+;Language - standard language definitions
+&EN
+
+; standard SIS file header
+#{"Ellipse"},(0xe8381f31),1,0,0
+
+;Localised Vendor name
+%{"Vendor-EN"}
+
+;Unique Vendor name
+:"Vendor"
+
+;Supports Series 60 v 5.0
+[0x101F7961], 0, 0, 0, {"Series60ProductID"}
+
+;Files to install
+;You should change the source paths to match that of your environment
+;<source> <destination>
+"\epoc32\release\armv5\urel\Ellipse_0xe8381f31.exe" -"!:\sys\bin\Ellipse_0xe8381f31.exe"
+"\epoc32\data\z\resource\apps\ellipse_0xe8381f31.r01" -"!:\resource\apps\Ellipse_0xe8381f31.r01"
+"\epoc32\data\z\resource\apps\ellipse_0xe8381f31.r31" -"!:\resource\apps\Ellipse_0xe8381f31.r31"
+"\epoc32\data\z\resource\apps\ellipse_0xe8381f31.r159" -"!:\resource\apps\Ellipse_0xe8381f31.r159"
+"\epoc32\data\z\private\10003a3f\apps\ellipse_0xe8381f31_reg.rsc" -"!:\private\10003a3f\import\apps\Ellipse_0xe8381f31_reg.rsc"
+"\epoc32\data\z\private\10003a3f\apps\ellipse_0xe8381f31_reg.r01" -"!:\private\10003a3f\import\apps\Ellipse_0xe8381f31_reg.r01"
+"\epoc32\data\z\private\10003a3f\apps\ellipse_0xe8381f31_reg.r31" -"!:\private\10003a3f\import\apps\Ellipse_0xe8381f31_reg.r31"
+"\epoc32\data\z\private\10003a3f\apps\ellipse_0xe8381f31_reg.r159" -"!:\private\10003a3f\import\apps\Ellipse_0xe8381f31_reg.r159"
+"\epoc32\data\z\resource\apps\ellipse_0xe8381f31.mif" -"!:\resource\apps\Ellipse_0xe8381f31.mif"
+"\epoc32\data\z\resource\apps\Ellipse_background.mif"-"!:\resource\apps\Ellipse_background.mif"
+
+;required for application to be covered by backup/restore facility 
+"..\sis\backup_registration.xml"		-"!:\private\e8381f31\backup_registration.xml"

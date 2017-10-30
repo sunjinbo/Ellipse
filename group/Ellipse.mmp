@@ -1,0 +1,71 @@
+/*
+============================================================================
+ Name        : Ellipse.mmp
+ Author      : Sun Jinbo
+ Copyright   : Your copyright notice
+ Description : This is the project specification file for Ellipse.
+============================================================================
+*/
+
+TARGET            Ellipse_0xe8381f31.exe
+TARGETTYPE        exe
+UID               0x100039CE 0xe8381f31
+
+SOURCEPATH        ..\src
+SOURCE            Ellipse.cpp
+SOURCE            EllipseApplication.cpp
+SOURCE            EllipseAppView.cpp
+SOURCE            EllipseAppUi.cpp
+SOURCE            EllipseDocument.cpp
+SOURCE            Coordinate.cpp 
+SOURCE            DrawingMethod.cpp
+SOURCE            ArchimedesMethod.cpp
+SOURCE            PinsStringMethod.cpp
+SOURCE            HypotrochoidMethod.cpp
+SOURCE            EmptyMethod.cpp
+SOURCE            DrawingMethodFactory.cpp
+SOURCE            BmpUtils.cpp
+
+SOURCEPATH        ..\data
+
+START RESOURCE    Ellipse.rss
+HEADER
+TARGET Ellipse_0xe8381f31
+TARGETPATH resource\apps
+END //RESOURCE
+
+START RESOURCE    Ellipse_reg.rss
+TARGET Ellipse_0xe8381f31_reg
+TARGETPATH       \private\10003a3f\apps
+END //RESOURCE
+
+USERINCLUDE       ..\inc
+USERINCLUDE       ..\loc
+
+SYSTEMINCLUDE     /epoc32/include
+
+LIBRARY           euser.lib
+LIBRARY           apparc.lib
+LIBRARY           cone.lib
+LIBRARY           eikcore.lib
+LIBRARY           avkon.lib
+LIBRARY           commonengine.lib
+LIBRARY           efsrv.lib 
+LIBRARY           estor.lib
+LIBRARY           aknnotify.lib
+LIBRARY           gdi.lib
+LIBRARY           fbscli.lib
+LIBRARY           bitgdi.lib
+LIBRARY           ws32.lib
+LIBRARY           aknicon.lib // for AknIconUtils
+LIBRARY           egul.lib    // for CGulIcon
+LIBRARY           eikcoctl.lib
+
+LANG sc 01 31 159
+
+VENDORID          0
+SECUREID          0xe8381f31
+CAPABILITY        ReadUserData
+
+// End of File
+

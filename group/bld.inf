@@ -1,0 +1,46 @@
+/*
+============================================================================
+ Name		: bld.inf
+ Author	  : Sun Jinbo
+ Copyright   : Your copyright notice
+ Description : This file provides the information required for building the
+				whole of a Ellipse.
+============================================================================
+*/
+
+PRJ_PLATFORMS
+WINSCW ARMV5 GCCE
+
+
+#ifdef SBSV2
+
+PRJ_EXTENSIONS
+	
+	START EXTENSION s60/mifconv
+	OPTION TARGETFILE ellipse_0xe8381f31.mif
+	OPTION HEADERFILE ellipse_0xe8381f31.mbg
+	OPTION SOURCEDIR ../gfx
+	OPTION SOURCES -c32 qgn_menu_Ellipse
+	END
+
+	START EXTENSION s60/mifconv
+	OPTION TARGETFILE Ellipse_background.mif
+	OPTION HEADERFILE Ellipse_background.mbg
+	OPTION SOURCEDIR ../gfx
+	OPTION SOURCES -c32 qgn_background_portrait.svg, qgn_background_landscape.svg
+	END
+
+#else
+
+PRJ_MMPFILES
+
+	gnumakefile icons_scalable_dc.mk
+
+
+	gnumakefile Ellipse_background.mk
+
+#endif
+
+PRJ_MMPFILES
+
+Ellipse.mmp

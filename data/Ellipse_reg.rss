@@ -1,0 +1,27 @@
+/*
+============================================================================
+ Name		: Ellipse.rss
+ Author	  : Sun Jinbo
+ Copyright   : Your copyright notice
+ Description : This file contains the application registration resource.
+============================================================================
+*/
+
+#include "Ellipse.hrh"
+#include "Ellipse.loc"
+#include <appinfo.rh>
+#include <ellipse_0xe8381f31.rsg>
+
+UID2 KUidAppRegistrationResourceFile
+UID3 _UID3
+
+RESOURCE APP_REGISTRATION_INFO
+	{
+	app_file="Ellipse_0xe8381f31";
+	localisable_resource_file =  "\\resource\\apps\\Ellipse_0xe8381f31";
+	localisable_resource_id = R_LOCALISABLE_APP_INFO;
+
+	embeddability=KAppNotEmbeddable;
+	newfile=KAppDoesNotSupportNewFile;
+	}
+
