@@ -1,2 +1,2 @@
 # Ellipse
-to simulate how to draw an ellipse shape
+This app is to simulate some methods how to draw an ellipse shape on canvas.
